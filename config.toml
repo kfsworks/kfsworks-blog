@@ -1,3 +1,26 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "KaFai Works"
+theme = "kiera"
+
+copyright = "Copyright &copy; 2018 - kfsworks"
+canonifyurls = true
+pygmentsCodeFences = true
+disqusShortname = "" #Disqus shortname
+googleAnalytics = "" #Google Analytics ID
+
+paginate = 3
+
+[author]
+    name = ""       #Author name
+    github = ""     #Github username
+    gitlab = ""     #Gitlab username
+    linkedin = ""   #LinkedIn username
+    facebook = ""   #Facebook username
+    twitter = ""    #Twitter username
+    instagram = ""  #Instagram username
+
+[params]
+    tagline = ""
+
+
