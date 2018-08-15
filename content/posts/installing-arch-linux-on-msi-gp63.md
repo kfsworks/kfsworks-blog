@@ -5,23 +5,28 @@ tags = []
 categories = []
 +++
 
-Recently got the MSI GP63, so I installed the arch on it right away. Below is some experience that would like to share, so other people would feel life is easier when installing linux.
+Recently got a MSI GP63 laptop, so I installed the arch on it right away. Below is some experience that would like to share, so other people would feel life is easier when installing arch linux.
 
-I will skip the basic stuff, such as alter the BIOS setting, set up locale etc, cause these information are all over the net. I will focus more on the video and audio.
+The basic/general stuff, such as alter the BIOS setting, disk partition, set up locale etc, will be skipped. Cause these information are all over the net. The focus wil be on the video and audio.
 
 ### Booting with the USB:
-I put below 2 kernel parameters to bring up the laptop.
+I put below 2 kernel parameters to bring up the laptop with usb stick.
 ```
   modprobe.blacklist=nouveau
   pcie_aspm=off
 ```
 
 ### Video card
-Since this notebook is nvidia optimus, and personally I need nvidia (sorry, no nouveau). And bumblebee is not my favour, so I stick nvidia with xorg. Arch Wiki has many reference for it. But let's share what I did.
+Since this notebook is nvidia optimus, and personally I need nvidia. And bumblebee is not my favour, so I stick nvidia with xorg. Arch Wiki has many reference for it. But let's share what I did.
 
-Install below packages 
+Install below packages inaddition to xorg and your favour window manager.
 ```
-linux-headers nvidia-dkms xorg-xrandr nvidia-settings nvidia-utils xorg-server xterm xsel xorg-twm  xorg-xinit xf86-input-libinput xbindkeys xdotool xorg-xev xorg-xwd xorg-xwininfo xorg-xwud xf86-video-intel xorg-xset xorg-xsetroot xorg-xvinfo xorg-xrefresh xorg-xrdb  xorg-xpr xorg-xprop xorg-xmodmap xorg-xlsclients xorg-xlsatoms xorg-xkill xorg-xkbutils xorg-xkbevd xorg-xhost xorg-xinput xorg-xkbcomp xorg-xgamma xorg-xdriinfo xorg-xdpyinfo xorg-xauth xorg-xcursorgen xorg-xcmsdb xorg-xbacklight xorg-x11perf xorg-smproxy xorg-setxkbmap xorg-sessreg xorg-iceauth xfsprogs lib32-nvidia-utils lib32-opencl-nvidia opencl-headers opencl-nvidia 
+linux-headers nvidia-dkms xorg-xrandr nvidia-settings nvidia-utils xf86-video-intel lib32-nvidia-utils lib32-opencl-nvidia opencl-headers opencl-nvidia 
+```
+
+And I use light for handling backlight
+```
+yaourt -S light
 ```
 
 Since I picked dkms, so the pacman hook is added as listed in the [wiki](https://wiki.archlinux.org/index.php/NVIDIA#Pacman_hook).
@@ -51,6 +56,7 @@ Add below kernel parameter to grub /etc/default/grub
 ```
 modprobe.blacklist=nouveau
 nvidia-drm.modeset=1
+pcie_aspm=off
 ```
 
 Add modules to /etc/mkinitcpio.conf
@@ -68,11 +74,12 @@ Inside xinitrc, add below
 ```
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
-xrandr --dpi 96
+xrandr --dpi 120
 ```
 
+
 ### Final
-Hopefully, you can successfully reboot and enjoy using nvidia for X. Sound is 98% work out of the box after pulseaudio and alsa installed. The 2% left were very annoying to me, will talk about it in next post.
+Hopefully, I didn't miss anything, and you can successfully reboot and enjoy using nvidia for X. Sound is 98% work out of the box after pulseaudio and alsa installed. The 2% left were very annoying to me, will talk about it in next post.
 
 ### Reference
 Arch Linux Nvidia [Wiki](https://wiki.archlinux.org/index.php/NVIDIA).
