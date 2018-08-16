@@ -1,20 +1,21 @@
 # Site settings
 baseurl = "https://example.org/"
+themesDir = "../.."
 languageCode = "en-us"
-title = "KaFai Works"
-theme = "hugo_theme_aglaus"
+title = "Hugo Cactus Theme"
+theme = "hugo-cactus-theme"
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = ""
 # Disable comments by leaving disqusShortname empty
-disqusShortname = ""
+disqusShortname = "spf13"
 
 [params]
-	name = "KaFai Works"
-	description = "There must be a way, all we need is patient."
-	bio = "There must be a way, all we need is patient."
+	name = "John Doe"
+	description = "Describe your website"
+	bio = "Blogger & Programmer"
 	# Enter optionally your twitter account
 	twitter = "Your Twitter account"
-	enableRSS = false
+	enableRSS = true
 
 	# Integrate Javascript files or stylesheets by adding the url to the external assets or by
 	# linking local files with their path relative to the static folder, e.g. "css/styles.css"
@@ -33,7 +34,7 @@ disqusShortname = ""
 	readMore = ""
 	copyright = ""
 	# Sharing options and author information in posts
-	aboutAuthor = "I'm a programmer."
+	aboutAuthor = "I'm an blogger."
 	tweet = ""
 	share = ""
 	# 404 page
