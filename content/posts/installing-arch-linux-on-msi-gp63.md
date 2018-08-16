@@ -77,6 +77,10 @@ xrandr --auto
 xrandr --dpi 120
 ```
 
+disable one of the unused systemd backlight service 
+```
+  sudo systemctl mask systemd-backlight@backlight\:acpi_video0.service
+```
 
 ### Final
 Hopefully, I didn't miss anything, and you can successfully reboot and enjoy using nvidia for X. Sound is 98% work out of the box after pulseaudio and alsa installed. The 2% left were very annoying to me, will talk about it in next post.
