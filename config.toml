@@ -13,7 +13,7 @@ disqusShortname = ""
 	description = "There must be a way, all we need is patient."
 	bio = "There must be a way, all we need is patient."
 	# Enter optionally your twitter account
-	twitter = "Your Twitter account"
+	twitter = ""
 	enableRSS = false
 
 	# Integrate Javascript files or stylesheets by adding the url to the external assets or by
@@ -47,7 +47,7 @@ disqusShortname = ""
 
 # Add additional social link entries underneath
 [social]
-    twitter  = "https://www.twitter.com/"
-    facebook = "https://www.facebook.com/"
-    github   = "https://www.github.com/"
-    dribble  = "https://www.dribbble.com/"
+    #twitter  = "https://www.twitter.com/"
+    #facebook = "https://www.facebook.com/"
+    github   = "https://github.com/kfsworks"
+    #dribble  = "https://www.dribbble.com/"
