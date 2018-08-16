@@ -1,6 +1,6 @@
 # Site settings
 #baseurl = "https://blissful-banach-5c1a94.netlify.com/"
-baseurl = "https://www.kafaiworks.com/"
+baseurl = "http://blog.kafaiworks.com/"
 languageCode = "en-us"
 title = "KaFai Works"
 theme = "hugo_theme_cactus"

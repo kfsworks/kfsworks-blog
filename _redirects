@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+http://blissful-banach-5c1a94.netlify.com/* http://blog.kafaiworks.com/:splat 301!
