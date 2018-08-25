@@ -1,7 +1,7 @@
 +++
 title = "Arch Linux Audio Setup on MSI GP63"
 date = 2018-08-16T06:02:36Z
-tags = []
+tags = ["archlinux", "msi", "gp63", "nvidia", "audio"]
 categories = []
 +++
 

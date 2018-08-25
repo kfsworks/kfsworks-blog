@@ -1,7 +1,7 @@
 +++
 title = "Installing Arch Linux on MSI GP63 (nvidia video setup)"
 date = 2018-08-14T05:17:02Z
-tags = []
+tags = ["archlinux", "msi", "gp63", "nvidia", "optimus", "video"]
 categories = []
 +++
 
