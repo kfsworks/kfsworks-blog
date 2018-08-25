@@ -1,7 +1,6 @@
 +++
 title = "Archlinux Fix Unstable Wifi Intel AC 9560 MSI GP63"
 date = 2018-08-25T14:00:52Z
-draft = true
 tags = []
 categories = []
 +++
