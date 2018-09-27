@@ -10,7 +10,7 @@ After using the MSI GP63 a while, there was an issue came up with the wifi, the 
 
 And it is very unfortunately that there is no similar report for this laptop and this wifi card (Intel AC 9560). But it is lucky that after some trial and error hacking with the options for iwlwifi, seems like I can keep it stable running (hibernate is also fine). I cannot tell whetherthe problem is related to the driver or firmware. But hopefully it will be fixed in the future.
 
-Create the conf file for iwlwifi as below and add the "options iwlwifi swcrypto=1" into it.
+Create the conf file for iwlwifi as below and add the "options iwlwifi 11n_disable=1 swcrypto=1" into it.
 ```
 sudo vim /etc/modprobe.d/iwlwifi.conf
 options iwlwifi swcrypto=1
